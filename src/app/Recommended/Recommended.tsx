@@ -1,16 +1,17 @@
 import React from 'react'
+import Buttons from '../components/Buttons'
 
-const Recommended = () => {
+const Recommended = ({handleClickHandler}) => {
   return (
     <>
         <div>
             <h2 className='ml-80 text-2xl mt-5 font-bold'>Recomended</h2>
             <div className='Recomended-flex flex ml-80 mb-5 mt-5 '>
-                <button className='px-5 py-2 mr-2 bg-transparent border border-solid border-[#ccc] rounded-md cursor-pointer'>All Products</button>
-                <button className='px-5 py-2 mr-2 bg-transparent border border-solid border-[#ccc] rounded-md cursor-pointer'>Nike</button>
-                <button className='px-5 py-2 mr-2 bg-transparent border border-solid border-[#ccc] rounded-md cursor-pointer'>Adidas</button>
-                <button className='px-5 py-2 mr-2 bg-transparent border border-solid border-[#ccc] rounded-md cursor-pointer'>Puma</button>
-                <button className='px-5 py-2 mr-2 bg-transparent border border-solid border-[#ccc] rounded-md cursor-pointer'>Vans</button>
+                <Buttons handleClick={handleClickHandler} value="" title="All Products"/>
+                <Buttons handleClick={handleClickHandler} value="Nike" title="Nike"/>
+                <Buttons handleClick={handleClickHandler} value="Adidas" title="Adidas"/>
+                <Buttons handleClick={handleClickHandler} value="Puma" title="Puma"/>
+                <Buttons handleClick={handleClickHandler} value="Vans" title="Vans"/>
             </div>
             
         </div>
