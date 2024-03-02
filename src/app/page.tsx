@@ -1,3 +1,5 @@
+"use client"
+
 import Nav from "./Navigation/Nav";
 import ProductPage from "./pages/ProductPage";
 

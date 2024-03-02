@@ -1,0 +1,10 @@
+/* ./src/app/Sidebar/Category/style.css */
+
+.sidebar-label-container input:checked ~ .checkmark{
+    background-color: #2196f3;
+  }
+  
+  .sidebar-label-container:hover .checkmark {
+    background-color: #ccc;
+  }
+  
