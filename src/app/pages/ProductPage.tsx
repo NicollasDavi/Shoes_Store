@@ -3,6 +3,16 @@ import Products from '../Products/Products'
 import Recommended from '../Recommended/Recommended'
 import Sidebar from '../Sidebar/Sidebar'
 
+interface Product {
+  img: string;
+  title: string;
+  star: number;
+  newPrice: number;
+  prevPrice: number;
+  category: string; // Adicione os tipos conforme necessário
+  color: string;
+  company: string;
+}
 
 import { useState } from "react";
 import Nav from "../Navigation/Nav";
@@ -45,7 +55,7 @@ const ProductPage = () => {
 
     if(selected){
       filteredProducts = filteredProducts.filter(
-        ({category, color, company, newPrice, title}) => 
+        ({category, color, company, newPrice, title} : Product) => 
         category === selected || 
         color === selected || 
         company === selected || 
@@ -55,7 +65,7 @@ const ProductPage = () => {
     }
 
 
-    return filteredProducts.map(({img, title, star, newPrice, prevPrice}) => (
+    return filteredProducts.map(({img, title, star, newPrice, prevPrice} : Product) => (
       <Card  
       key={Math.random()}
       img={img}
@@ -76,7 +86,7 @@ const ProductPage = () => {
 
 
   return (
-    <div>
+    <div >
       <Sidebar handleChange={handleChange}/>
       <Nav query={query} handleInputChange={handleInputChange}/>
       <Recommended handleClickHandler={handleChange}/>
