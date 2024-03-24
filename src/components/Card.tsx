@@ -9,13 +9,10 @@ const Card = ({img, title, star, newPrice, prevPrice}) => {
           <img src={img} alt="Shoe" className='w-52 mb-4 h-36 object-contain' />
           <div className='card-details'>
             <h3 className='card-title mb-4'>{title}</h3>
-            <section className='card-reviews mb-4 flex'>
-            {star} {star} {star} {star}
-            </section>
 
             <section className='card-price flex justify-around items-center'>
               <div className='price'>
-                <del>{prevPrice}</del> {newPrice}
+                {prevPrice} 
               </div>
 
               <div className="bag">
